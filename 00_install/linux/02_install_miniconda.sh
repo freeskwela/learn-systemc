@@ -38,13 +38,19 @@ fi
 
 # options
 printf "\\n"
-printf "User Options (Post-Installation)\\n"
+printf "Post Installation :: User Options\\n"
 printf "************************************************************\\n"
 printf " - to initialize conda variables\\n"
 printf "\\t command: source ~/.bashrc\\n"
 printf " - to check conda installation directory\\n"
-printf "\\t command: which conda\\n"
+printf "\\t command: conda info --base\\n"
+printf "\\t command: source ~/devtools/miniconda/etc/profile.d/conda.sh"
 printf " - to disable conda 'base' environment auto-activation\\n"
 printf "\\t command: conda config --set auto_activate_base false && source ~/.bashrc\\n"
+
+printf "\\n"
+printf "Cleaning :: Miniconda Installer \\n"
+printf "************************************************************\\n"
+rm -rf $CONDA_INST
 
 cd $PROJECTDIR

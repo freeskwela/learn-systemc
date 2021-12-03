@@ -1,4 +1,9 @@
-sudo apt install libopengl-dev libegl1 xcb
+sudo apt-get update && sudo apt-get upgrade
+
+sudo apt-get install build-essential cmake autoconf automake m4 perl gdb
+sudo apt-get install g++-multilib
+
+sudo apt-get install libopengl-dev libegl1 xcb
 sudo apt-get install gedit
 
 # vcxsrv
@@ -6,3 +11,9 @@ export DISPLAY="`grep nameserver /etc/resolv.conf | sed 's/nameserver //'`:0.0"
 export LIBGL_ALWAYS_INDIRECT=1
 export XDG_RUNTIME_DIR=/home/ubuntu/devtools/xdg-runtime
 export RUNLEVEL=3
+
+pip install --upgrade pip
+
+# install systemc
+# install systemc-sc
+# install pysysc
