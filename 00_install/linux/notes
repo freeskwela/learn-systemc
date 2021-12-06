@@ -2,6 +2,8 @@ sudo apt-get update && sudo apt-get upgrade
 
 sudo apt-get install build-essential cmake autoconf automake m4 perl gdb
 sudo apt-get install g++-multilib
+sudo apt-get install libboost-all-dev
+sudo apt-get install clang-format
 
 sudo apt-get install libopengl-dev libegl1 xcb
 sudo apt-get install gedit
