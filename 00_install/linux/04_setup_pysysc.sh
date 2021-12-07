@@ -7,7 +7,7 @@ cd $SCRIPTDIR && cd ../..
 export PROJECTDIR=$(pwd)
 
 export CXX=g++
-export STDCXX=11
+export STDCXX=17
 
 export PYSYSC_GIT=https://github.com/accellera-official/PySysC.git
 export PYSYSC_SC_GIT=https://git.minres.com/SystemC/PySysC-SC.git

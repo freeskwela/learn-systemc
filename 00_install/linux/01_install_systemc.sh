@@ -21,26 +21,27 @@ export DEVTOOLS=$HOME/devtools
 export PROJECTS=$HOME/projects
 
 export CXX=g++
-export STDCXX=11
+export STDCXX=17
 export STDCXX="-std=gnu++$STDCXX"
 export STACK_SIZE="-DSC_OVERRIDE_DEFAULT_STACK_SIZE=0x80000"
 
 # export BUILD=x86_64-linux-gnu
-# export TARGET=x86_6-linux-gnu
+# export TARGET=x86_64-linux-gnu
 
 export SYSTEMC_VERSION=2.3.3
+export SCC_VERSION
 
-export SYSTEMC_HOME=$DEVTOOLS/systemc/$SYSTEMC_VERSION
+export SYSTEMC_HOME=$DEVTOOLS/systemc/systemc-$SYSTEMC_VERSION
 export SYSTEMC_GIT=https://github.com/accellera-official/systemc.git
-export SYSC_SC_HOME=$DEVTOOLS/systemc-components
-export SYSC_SC_GIT=https://github.com/Minres/SystemC-Components.git
+export SCC_HOME=$DEVTOOLS/systemc/scc
+export SCC_GIT=https://github.com/Minres/SystemC-Components.git
 
 export VPD=$PWD
 echo ""
 echo "Setup :: Source Folders"
 echo "************************************************************"
 export SYSTEMC_SOURCE=$VPD/systemc-$SYSTEMC_VERSION
-export SYSC_SC_SOURCE=$VPD/systemc-components
+export SCC_SOURCE=$VPD/scc
 
 echo ""
 echo "Cloning :: SystemC $SYSTEMC_VERSION Release :: $SYSTEMC_GIT"
@@ -51,7 +52,6 @@ echo ""
 echo "Creating :: SystemC Install Folder :: $SYSTEMC_HOME"
 echo "************************************************************"
 mkdir -p $SYSTEMC_HOME
-mkdir -p $SYSC_SC_HOME
 
 echo ""
 echo "Entering :: SystemC Source Folder :: $SYSTEMC_SOURCE"
@@ -89,7 +89,7 @@ make install VERBOSE=0
 echo ""
 echo "Post Installation :: User Options"
 echo "************************************************************"
-echo -e "# SystemC\nexport SYSTEMC_HOME=$SYSTEMC_HOME" >> $HOME/.bashrc
+# echo -e "# SystemC\nexport SYSTEMC_HOME=$SYSTEMC_HOME" >> $HOME/.bashrc
 printf " - to initialize SystemC variables\\n"
 printf "\\t command: source ~/.bashrc\\n"
 

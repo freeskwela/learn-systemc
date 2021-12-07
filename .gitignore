@@ -2,3 +2,5 @@
 .build/
 .workspace/
 __pycache__/
+
+*.exe
