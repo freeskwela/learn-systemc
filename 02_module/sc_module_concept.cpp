@@ -40,6 +40,7 @@ int sc_main(int sc_argc, char* sc_argv[])
     ModuleStruct modStruct("modStruct");
     ModuleClass modClass("modClass");
     ModuleScModule modScMod("modScMod");
+    
     // invoke the simulator
     sc_start();
 

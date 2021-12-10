@@ -25,6 +25,7 @@ int sc_main(int sc_argc, char* sc_argv[])
 { 
     // instance of the module
     HelloSystemC helloModule("helloModule");
+    
     // invoke the simulator
     sc_start();
 
