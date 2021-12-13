@@ -37,6 +37,7 @@ export SCC_VERSION
 export SYSTEMC_HOME=$ACCELLERA/systemc-$SYSTEMC_VERSION
 export CCI_HOME
 export SCC_HOME=$ACCELLERA/scc
+
 export SYSTEMC_GIT=https://github.com/accellera-official/systemc.git
 export CCI_GIT
 export SCC_GIT=https://github.com/Minres/SystemC-Components.git
@@ -74,7 +75,6 @@ mkdir  build && cd build
 --target=$TARGET \
 --prefix=$SYSTEMC_HOME \
 --enable-debug \
---enable-pthreads \
 CFLAGS="$STDCXX $STACK_SIZE" \
 CXXFLAGS="$STDCXX $STACK_SIZE" \
 LDFLAGS="$STDCXX $STACK_SIZE"
@@ -95,9 +95,6 @@ make install VERBOSE=0
 echo ""
 echo "Post Installation :: User Options"
 echo "************************************************************"
-echo -e "# SystemC\nexport SYSTEMC_HOME=$SYSTEMC_HOME" >> $HOME/.bashrc
-printf " - to initialize SystemC variables\\n"
-printf "\\t command: source ~/.bashrc\\n"
 
 echo ""
 echo "Cleaning :: Source Files"

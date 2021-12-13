@@ -1,0 +1,33 @@
+# Embedded Systems Development Environment (Windows)
+## Workspace
+* Run *setup.bat*
+    * Create ***.workspace*** folder under *%USERPROFILE%* directory.
+    * Create *devtools* and *projects* folders.
+    * Setup basic development tools.
+```
++-- .workspace <W:>
+|   +-- devtools
+|   |   +-- eclipse
+|   |   |   +-- app4mc
+|   |   |   +-- papyrus
+|   |   |   +-- ...
+|   |   +-- miniconda
+|   |   |   +-- condabin
+|   |   |   +-- envs
+|   |   |   |   +-- mde
+|   |   |   |   +-- ...
+|   |   |   +-- ...
+|   |   +-- msys
+|   |   |   +-- clang64
+|   |   |   +-- mingw64
+|   |   |   +-- ...
+|   |   +-- systemc
+|   |   +-- vscode
+|   |   +-- ...
+|   +-- projects
+|   |   +-- ...
+```
+### Setup MSYS2-MinGW64
+### Setup Miniconda
+### Setup Python virtual environment
+### Setup SystemC
