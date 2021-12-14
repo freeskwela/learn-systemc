@@ -17,17 +17,23 @@ md %WS%
 :: )
 
 :: create devtools and projects folders
-setx DEVTOOLS %WS%\devtools
-setx PROJECTS %WS%\projects
+set DEVTOOLS=%WS%\devtools
+set PROJECTS=%WS%\projects
 
 md %DEVTOOLS%
 md %PROJECTS%
 md %WS%\.tmp
+
+setx DEVTOOLS %DEVTOOLS%
+setx PROJECTS %PROJECTS%
 
 :: setup basic development tools
 
 :: msys2-mingw64
 call install_msys2-base.bat
 
+:: vscode-portable
+call install_vscode-portable.bat
 
-pause
+
+@REM pause
