@@ -29,11 +29,17 @@ setx PROJECTS %PROJECTS%
 
 :: setup basic development tools
 
+:: archiving tool
+call install_7zip.bat
+
+:: git
+call install_git.bat
+
 :: msys2-mingw64
-call install_msys2-base.bat
+call install_msys2.bat
 
 :: vscode-portable
-call install_vscode-portable.bat
+call install_vscode.bat
 
 
 @REM pause
