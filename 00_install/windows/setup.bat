@@ -6,16 +6,6 @@ set BATCHDIR=%~dp0
 set WS=%USERPROFILE%\.workspace
 md %WS%
 
-:: create a virtual drive W: from this .workspace folder
-:: set WSDRV=W:
-:: subst %WSDRV% %WS%
-:: subst script into Startup folder
-:: set WSDRV_STARTUP="%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\wsdrive.bat"
-:: if exist %WSDRV_STARTUP% (
-::     del %WSDRV_STARTUP%
-::     echo @subst %WSDRV% %WS% > %WSDRV_STARTUP%
-:: )
-
 :: create devtools and projects folders
 set DEVTOOLS=%WS%\devtools
 set PROJECTS=%WS%\projects
@@ -40,6 +30,11 @@ call install_msys2.bat
 
 :: vscode-portable
 call install_vscode.bat
+
+:: systemc
+call install_systemc.bat
+
+:: miniconda
 
 
 @REM pause

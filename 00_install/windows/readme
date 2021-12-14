@@ -1,5 +1,5 @@
 # Embedded Systems Development Environment (Windows)
-## Workspace
+## Workspace Folder
 * Run *setup.bat*
     * Create ***.workspace*** folder under *%USERPROFILE%* directory.
     * Create *devtools* and *projects* folders.
@@ -22,15 +22,20 @@
 |   |   |   +-- mingw64
 |   |   |   +-- ...
 |   |   +-- systemc
+|   |   |   +-- cci
+|   |   |   +-- core
 |   |   +-- vscode
 |   |   +-- ...
 |   +-- projects
 |   |   +-- ...
 ```
-### Setup 7-zip Archive Tool
-### Setup Git
-### Setup MSYS2 (MinGW64, Clang64)
-### Setup Visual Studio Code
-### Setup SystemC
-### Setup Miniconda
-### Setup Python virtual environment
+### 7-zip Archive Tool
+- This 7-zip installation may require an administrator priviledge.
+- Succeeding installation uses 7-zip for file extraction.
+### Git
+### MSYS2 (MinGW64, Clang64)
+### Visual Studio Code
+- Portable mode (unable to get updates automatically)
+### SystemC
+- Built and installed using MSYS2-MinGW64
+### Miniconda

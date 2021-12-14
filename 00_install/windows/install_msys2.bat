@@ -16,7 +16,7 @@ curl -# -L -o %TMP%\msys2-base.tar.xz %MSYSTAR%
 rename %DEVTOOLS%\msys64 msys
 
 :: setup packages
-:: TODO: adding packages (mingw64, clang64)
+call %MSYS%\msys2_shell.cmd
 
 :: notes
 echo.
