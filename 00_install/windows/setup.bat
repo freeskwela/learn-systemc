@@ -1,38 +1,28 @@
 @echo off
 
 set BATCHDIR=%~dp0
+set CMDIR=%BATCHDIR%cmd
+set UTDIR=%BATCHDIR%utils
 
 :: create .workspace folder under %USERPROFILE% directory
-set WS=%USERPROFILE%\.workspace
-md %WS%
-
-:: create devtools and projects folders
-set DEVTOOLS=%WS%\devtools
-set PROJECTS=%WS%\projects
-
-md %DEVTOOLS%
-md %PROJECTS%
-md %WS%\.tmp
-
-setx DEVTOOLS %DEVTOOLS%
-setx PROJECTS %PROJECTS%
+call %CMDIR%\create-workspace.bat
 
 :: setup basic development tools
 
 :: archiving tool
-call install_7zip.bat
+call %CMDIR%\install-7zip.bat %UTDIR%
 
 :: git
-call install_git.bat
-
-:: msys2-mingw64
-call install_msys2.bat
+call %CMDIR%\install-git.bat %ZIP%\7z.exe
 
 :: vscode-portable
-call install_vscode.bat
+call %CMDIR%\install-vscode.bat %ZIP%\7z.exe
+
+:: msys2-mingw64
+@REM call %CMDIR%\install-msys.bat
 
 :: systemc
-call install_systemc.bat
+@REM call %CMDIR%\install-systemc.bat
 
 :: miniconda
 

@@ -1,20 +1,30 @@
 @echo off
 
-set TMP=%WS%\.tmp
+set VSCBATCH=%~dp0
+
 set VSCVERSION=1.63.0
 set VSCODEINST=https://update.code.visualstudio.com/%VSCVERSION%/win32-x64-archive/stable
 set VSCODE=%DEVTOOLS%\vscode
 
-if not exist %TMP% (
-    md %TMP%
-)
+set CREATEDIRS=%VSCBATCH%create-workspace.bat
 
 :: reference: https://code.visualstudio.com/docs/editor/portable
 :: TODO: updating to new version
 
+if not exist %WSTMP% (
+    call %CREATEDIRS%
+)
+
+:: 7zip
+set SZ=%1
+
 :: download and extract the installation files
-curl -# -L -o %TMP%\vscode-win64.zip %VSCODEINST%
-7z x %TMP%\vscode-win64.zip -o%VSCODE%
+echo.
+echo Downloading Visual Studio Code ver. %VSCVERSION% (Portable Mode)
+curl -# -L -o %WSTMP%\vscode-win64.zip %VSCODEINST%
+echo.
+echo Extracting files
+%SZ% x %WSTMP%\vscode-win64.zip -o%VSCODE%
 md %VSCODE%\data
 
 :: setup extensions
@@ -23,9 +33,9 @@ md %VSCODE%\data
 :: notes
 echo.
 echo ************************************************************
-echo *                         NOTES                            *
+echo *  NOTES :: Visual Studio Code (Portable Mode)             *
 echo ************************************************************
-echo Add %VSCODE%\bin into the user Path environment variable!
+echo Add %VSCODE%\bin into the User Path Environment Variable.
 echo Note: Restart terminal session to use new path.
 echo.
 echo ************************************************************
