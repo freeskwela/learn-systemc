@@ -1,5 +1,0 @@
-cppyy
-conan
-pyside6
-numpy
-pandas
