@@ -97,3 +97,6 @@ echo ""
 echo "Cleaning :: Source Files"
 echo "************************************************************"
 # rm -rf $SYSTEMC_SOURCE
+
+# logout
+logout

@@ -10,19 +10,19 @@ call %CMDIR%\create-workspace.bat
 :: setup basic development tools
 
 :: archiving tool
-call %CMDIR%\install-7zip.bat %UTDIR%
+@REM call %CMDIR%\install-7zip.bat %UTDIR%
 
 :: git
-call %CMDIR%\install-git.bat %ZIP%\7z.exe
+@REM call %CMDIR%\install-git.bat %ZIP%\7z.exe
 
 :: vscode-portable
-call %CMDIR%\install-vscode.bat %ZIP%\7z.exe
+@REM call %CMDIR%\install-vscode.bat %ZIP%\7z.exe
 
 :: msys2-mingw64
-@REM call %CMDIR%\install-msys.bat
+@REM call %CMDIR%\install-msys.bat %ZIP%\7z.exe %CMDIR%\bash
 
 :: systemc
-@REM call %CMDIR%\install-systemc.bat
+call %CMDIR%\install-systemc.bat %CMDIR%\bash
 
 :: miniconda
 
