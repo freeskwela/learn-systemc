@@ -1,0 +1,4 @@
+[submodule "workspace-setup"]
+	path = workspace-setup
+	url = git@github.com:freeskwela/workspace-setup.git
+	branch = main
