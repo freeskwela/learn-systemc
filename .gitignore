@@ -1,6 +1,6 @@
-.vscode/
-.build/
-.workspace/
-__pycache__/
+/.vscode/
+/.build/
+/.workspace/
+/__pycache__/
 
 *.exe

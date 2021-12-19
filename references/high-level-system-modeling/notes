@@ -1,4 +1,0 @@
-https://wiki.f-si.org/index.php/High_level_system_modelling,_hands-on_computer_session
-
-wget https://darwin.greensocs.com/s/YF9Bk3yFEdyEqnN/download -O hands-on-vp.tar.gz
-tar xvf hands-on-vp.tar.gz
