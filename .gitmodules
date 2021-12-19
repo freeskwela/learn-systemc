@@ -1,0 +1,4 @@
+[submodule "00_setup"]
+	path = 00_setup
+	url = git@github.com:fivedbrothers/workspace-setup.git
+	branch = main
