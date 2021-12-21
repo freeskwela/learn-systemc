@@ -1,5 +1,6 @@
 
 #include<systemc>
+#include<cci_configuration>
 
 using namespace sc_core;
 
